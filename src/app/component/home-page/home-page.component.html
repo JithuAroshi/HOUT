@@ -1,0 +1,925 @@
+
+<header class="h-14 lg:h-max flex flex-col justify-between items-center lg:py-2 lg:px-6 relative z-50">
+
+  <div [class.home]="homeshow" [class.homebk]="!homeshow" class=" w-full bg-white absolute left-0 top-20 px-5 duration-500 ease-linear overflow-hidden" >
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">HOME</h1>
+      <button (click)="homefn()">
+          <span class="material-symbols-outlined text-sm font-extrabold">
+{{homearrow}}
+            </span>
+      </button>
+      </div>
+
+      <div [class.homemenu]="home" [class.homemenubk]="!home" class="overflow-hidden duration-500 ease-linear" >
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Main Page</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Store</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cart</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Out Team</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">About Us</p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">PAGES</h1>
+      <button (click)="pagefn()">
+          <span class="material-symbols-outlined text-sm font-extrabold">
+{{pagesarrow}}
+            </span>
+      </button>
+      </div>
+
+      <div [class.homemenu]="pages" [class.homemenubk]="!pages" class="overflow-hidden duration-500 ease-linear" >
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Checkout</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Profile</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Order Tracking</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Wishlist</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">FAQs</p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">SHOP</h1>
+      <button (click)="shopfn()">
+          <span class="material-symbols-outlined text-sm font-extrabold">
+{{shoparrow}}
+            </span>
+      </button>
+      </div>
+
+      <div [class.homemenu2]="shop" [class.homemenubk2]="!shop" class="overflow-hidden duration-500 ease-linear" >
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Chair</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Sofa</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Table</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cabinet</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Tv Stand</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Bed</p>
+        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Decorators</p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">STORE</h1>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col ">
+      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
+        <h1 class="text-xs font-semibold tracking-widest">ABOUT US</h1>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="h-5 w-[75%] flex justify-between border-b-[1px] mb-3">
+<h1 class="text-h1-text-color/70 font-thin text-xs">Free Shipping for order over$50!</h1>
+<span class="flex gap-3 text-h1-text-color/70 font-thin text-xs">
+  <h1>FAQ</h1>
+  <h1>Contact</h1>
+</span>
+  </div>
+
+ <div class="flex justify-between items-center w-full lg:w-[75%] py-2 lg:py-0 ">
+  <span class="hidden lg:flex justify-center items-center w-52 ">
+    <span class="material-symbols-outlined text-lg text-black/80">
+      search
+      </span>
+    <input class="w-full h-10 px-1 outline-none bg-transparent text-xs text-black/80 placeholder-black/80" type="text" placeholder="SEARCH...">
+  </span>
+
+  <div class="h-14 w-36 lg:h-20 pb-1 lg:w-52 ">
+  <img class="h-full w-full object-contain" src="../../../assets/images/logo/Icon.png" alt="">
+  </div>
+
+  <div class="flex items-center justify-end gap-4 w-52 ">
+    <button class="hidden lg:block">
+      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
+person
+        </span>
+    </button>
+    <button class="hidden lg:flex items-center gap-1">
+      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
+        favorite
+        </span>
+        <h1 class="text-black/80">0</h1>
+    </button>
+    <button class="flex items-center gap-1">
+      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
+        shopping_bag
+        </span>
+        <h1 class="text-black/80">0</h1>
+    </button>
+    <button class="lg:hidden flex justify-center items-center">
+      <span (click)="homeshowfn()" class="material-symbols-outlined text-black/80">
+        menu
+        </span>
+    </button>
+  </div>
+ </div>
+
+ <div class="lg:flex gap-12 mt-4 mb-3 hidden h-4">
+  <button class="">
+    <H1 class="tracking-widest text-xs font-semibold text-black/80 ">HOME</H1>
+  </button>
+  <button>
+    <H1 class="tracking-widest text-xs font-semibold text-black/80">PAGES</H1>
+  </button>
+  <button>
+    <H1 class="tracking-widest text-xs font-semibold text-black/80">SHOP</H1>
+  </button>
+  <button>
+    <H1 class="tracking-widest text-xs font-semibold text-black/80">STORE</H1>
+  </button>
+  <button>
+    <H1 class="tracking-widest text-xs font-semibold text-black/80">ABOUT US</H1>
+  </button>
+ </div>
+
+<section [class.cart]="cartshow" [class.cartbk]="!cartshow" class="h-screen w-0 overflow-hidden flex justify-between absolute top-0 right-0 duration-500 bg-black/30 ">
+  <div (click)="cartbk()" class="h-full w-[10%] md:w-[40%] lg:w-full relative ">
+  </div>
+<div class="h-full w-[90%] md:w-[60%] lg:w-[440px] p-2 md:p-4 bg-white relative">
+<div class="h-[85%] w-full py-4 border-b-[1.5px] border-h1-text-color overflow-y-scroll ">
+<div class="flex flex-col gap-2">
+
+  <div class="h-32 w-full flex ">
+    <div class="h-full w-[35%] bg-pic-background-color">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/Hunt143.jpg" alt="">
+    </div>
+    <div class="h-full w-[60%] px-3 flex flex-col gap-3 ">
+      <h1 class="font-semibold tracking-widest">WALL PLANT </h1>  <!-----Limit 21 Letters-->
+      <p class="text-lg text-h1-text-color">Quantity: 1</p>
+      <p class="text-lg ">$46.00</p>
+    </div>
+    <button class="flex items-start p-1">
+      <span class="material-symbols-outlined text-base">
+        close
+        </span>
+    </button>
+  </div>
+
+  <div class="h-32 w-full flex ">
+    <div class="h-full w-[35%] bg-pic-background-color">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/Hunt162.jpg" alt="">
+    </div>
+    <div class="h-full w-[60%] px-3 flex flex-col gap-3 ">
+      <h1 class="font-semibold tracking-widest">WALL PLANT </h1>  <!-----Limit 21 Letters-->
+      <p class="text-lg text-h1-text-color">Quantity: 1</p>
+      <p class="text-lg ">$46.00</p>
+    </div>
+    <button class="flex items-start p-1">
+      <span class="material-symbols-outlined text-base">
+        close
+        </span>
+    </button>
+  </div>
+
+
+</div>
+
+</div>
+
+<div class="flex justify-between items-center w-full p-3 ">
+  <h1 class="text-xl font-semibold tracking-wider ">TOTAL:</h1>
+  <p class="text-lg text-h1-text-color -mt-1 ">$40.00</p>
+</div>
+
+<div class="flex justify-between items-center gap-3 md:gap-5  w-full p-1 px-3 md:px-4 ">
+  <button class="py-2 w-full bg-black">
+    <p class="text-white tracking-wider text-lg">View Cart</p>
+  </button>
+  <button class="py-2 w-full border-black/60 border-[0.1px]">
+    <p class=" text-lg tracking-wider">Checkout</p>
+  </button>
+</div>
+
+</div>
+</section>
+
+  </header>
+
+
+<!-- ------------------------------------------------------------Home-Page------------------------------------------------ -->
+
+
+  <section class="h-[80vh] w-full relative">
+    <span class="flex justify-center items-center p-4 absolute top-0 left-0 lg:hidden">
+      <span class="material-symbols-outlined text-white">
+        search
+        </span>
+      <input class="w-full h-10 px-1 outline-none bg-transparent text-white placeholder-white" type="text" placeholder="Search...">
+    </span>
+    <img class="h-full w-full object-cover object-left-bottom -z-50" src="../../../assets/images/HomePagePics/carosal.jpg" alt="">
+  </section>
+
+  <section class="w-full flex flex-col gap-10 md:gap-20 items-center pt-20 md:pt-28 ">
+
+    <div class="h-[510px] md:h-[790px] w-[85%] md:w-[75%] ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/Hunt162.jpg" alt="">
+      </div>
+      <div class="w-full h-[15%] flex justify-between p-4 px-6 bg-pic-background-color">
+        <div>
+          <h1 class="md:text-lg">CHAIR</h1>
+        <h1 class="md:text-lg">Handmade</h1>
+        </div>
+        <p class="md:text-lg ">$40.00</p>
+      </div>
+      <div class="h-[15%] w-full">
+      </div>
+    </div>
+
+    <div class="relative w-[85%] md:w-[75%] ">
+      <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt87.jpg" alt="">
+      <span class="absolute top-4 md:top-10 md:left-10 left-4">
+        <h1 class="text-2xl">CERAMICS BLOGS</h1>
+      <p class="text-xl underline ">Shop Now</p>
+      </span>
+      <h2 class="absolute bottom-2 left-2 md:bottom-8 md:left-10 text-4xl">-25% off</h2>
+    </div>
+  </section>
+
+  <section class="w-full flex flex-col gap-10 md:gap-20 items-center md:pt-6 pb-20 ">
+
+    <div class="relative w-[85%] md:w-[75%] mt-16">
+      <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt83.jpg" alt="">
+      <span class="absolute top-4 md:top-10 md:left-10 left-4">
+        <h1 class="text-2xl">CERAMICS BLOGS</h1>
+      <p class="text-xl underline">Shop Now</p>
+      </span>
+      <h2 class="absolute bottom-2 left-2 md:bottom-8 md:left-10 text-4xl">-50% off</h2>
+    </div>
+
+   <div class="h-[510px] md:h-[790px] w-[85%] md:w-[75%] ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/Hunt143.jpg" alt="">
+      </div>
+      <div class="w-full h-[15%] flex justify-between p-4 px-6 bg-pic-background-color">
+        <div>
+          <h1 class="md:text-lg">CHAIR</h1>
+        <h1 class="md:text-lg">Handmade</h1>
+        </div>
+        <p class="md:text-lg ">$40.00</p>
+      </div>
+      <div class="h-[15%] w-full">
+      </div>
+    </div>
+
+  </section>
+
+  <section class="h-[690px] mt-12 w-full bg-secondary-color overflow-hidden flex justify-center items-center">
+
+<div class="relative h-[690px] md:w-[800px] lg:w-[1200px] flex flex-col justify-center items-center md:items-end gap-6 md:pr-10 ">
+  <div class="absolute top-16 -left-96">
+    <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-8.png" alt="">
+  </div>
+  <div class="absolute top-6 -right-16">
+    <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-4.png" alt="">
+  </div>
+  <div class="absolute top-12 -left-20">
+    <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-2.png" alt="">
+  </div>
+  <div class="absolute top-96 -right-36">
+    <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-6.png" alt="">
+  </div>
+  <div class="hidden md:block absolute top-44 left-8 h-96 w-72">
+    <img class="h-full w-full" src="../../../assets/images/HomePagePics/Hunt42.jpg" alt="">
+  </div>
+  <div class="hidden md:block absolute top-56 -left-4 h-56 w-52">
+    <img class="h-full w-full" src="../../../assets/images/HomePagePics/Hunt40.jpg" alt="">
+  </div>
+
+  <h1 class="relative text-center text-white text-5xl font-medium tracking-widest">THINK <br class="md:hidden"> DIFFERENT</h1>
+  <h4 class="relative text-center md:text-start md:w-1/2 text-white text-lg font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga cum quidem numquam ea facilis saepe quisquam alias doloribus officia dolore, assumenda ad. Unde quas sit, dolore tempora vitae error!</h4>
+<div class="w-1/2 flex justify-center md:justify-start">
+  <button class="relative h-14 w-52 mt-3 border-white border-[1px] bg-secondary-color">
+    <p class="relative text-xl text-white">Read More</p>
+  </button>
+</div>
+</div>
+
+  </section>
+
+<!-- ------------------------------------------------------------Today's-Deal-------------------------------------------------- -->
+
+  <section class="mt-24">
+    <div>
+      <h1 class="text-2xl mt-16 mb-8 text-center font-semibold">TODAY'S DEAL</h1>
+    </div>
+   <div class="w-screen lg:w-full overflow-auto md:pl-14">
+    <div class=" w-max p-8 overflow-x-scroll flex justify-start items-center gap-12 ">
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%] ">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- --------------------------------------------------------MOST_WANTED--------------------------------------------------- -->
+
+  <section>
+      <h1 class="text-2xl mb-8 text-center font-semibold">MOST WANTED</h1>
+   <div class="w-screen lg:w-full overflow-auto md:pl-14">
+    <div class=" w-max p-8 overflow-x-scroll flex justify-start items-center gap-12 ">
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64 ">
+        <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+            <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="px-6 md:px-20 mb-16">
+  <div class="">
+    <img class="h-full w-full " src="../../../assets/images/HomePagePics/carosal.jpg" alt="">
+  </div>
+</section>
+
+<!-- ----------------------------------------------------------------Testimonial------------------------------------------------------ -->
+
+  <section class="pb-6 px-6 md:px-4 md:mx-16 mt-20 flex flex-col md:flex-row md:justify-center">
+  <div class=" h-44 w-40 relative ">
+    <div class="absolute top-7 left-0 ">
+      <img src="../../../assets/images/HomePagePics/SVGIcons/svg-9.png" alt="">
+    </div>
+    <div class="absolute top-7 left-2 ">
+      <img src="../../../assets/images/HomePagePics/SVGIcons/svg-10.png" alt="">
+    </div>
+    <div class="absolute top-20 left-14 ">
+      <img src="../../../assets/images/HomePagePics/SVGIcons/svg-11.png" alt="">
+    </div>
+  </div>
+
+  <div class=" md:w-2/3 lg:w-1/2 md:pt-5">
+    <h2 class="text-6xl text-[#a1afb6] mt-2">Testimonials</h2>
+  <div class="mt-2">
+  <h1 class="text-2xl font-medium tracking-widest ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque veritatis asperiores. Repellendus, officiis.</h1>
+  <h1 class="text-h1-text-color mt-2 font-extralight tracking-wider">Jithu Aroshi.</h1>
+  </div>
+  </div>
+
+  <div class="h-12 w-2/3 md:h-48 md:mt-6 md:w-16 mt-1"></div>
+
+  </section>
+
+  <!-- -------------------------------------------------------------------Best-Selling----------------------------------------------- -->
+
+  <section class="mt-24">
+    <h1 class="text-2xl mt-16 mb-8 text-center font-semibold">BEST SELLING</h1>
+ <div class="w-screen lg:w-full overflow-auto md:pl-14">
+  <div class=" w-max p-8 overflow-x-scroll flex justify-start items-center gap-12 ">
+
+    <div class="h-[480px] w-64 ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-[480px] w-64 ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-[480px] w-64 ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-[480px] w-64 ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-[480px] w-64 ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-[480px] w-64 ">
+      <div class="w-full h-[70%]">
+        <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- --------------------------------------------------------------Latest--------------------------------------------------------- -->
+
+<section>
+  <h1 class="text-2xl mb-8 text-center font-semibold">LATEST PRODUCT</h1>
+<div class="w-screen lg:w-full overflow-auto md:pl-14">
+<div class=" w-max p-8 overflow-x-scroll flex justify-start items-center gap-12 ">
+
+  <div class="h-[480px] w-64 ">
+    <div class="w-full h-[70%]">
+      <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+    </div>
+    <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+      <div>
+        <h1>CHAIR</h1>
+      <h4 class="text-sm text-h4-text-color">Handmade</h4>
+      </div>
+      <p class=" text-lg h-12">$40.00</p>
+    </div>
+  </div>
+
+  <div class="h-[480px] w-64 ">
+    <div class="w-full h-[70%]">
+      <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+    </div>
+    <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+      <div>
+        <h1>CHAIR</h1>
+      <h4 class="text-sm text-h4-text-color">Handmade</h4>
+      </div>
+      <p class=" text-lg h-12">$40.00</p>
+    </div>
+  </div>
+
+  <div class="h-[480px] w-64 ">
+    <div class="w-full h-[70%]">
+      <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+    </div>
+    <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+      <div>
+        <h1>CHAIR</h1>
+      <h4 class="text-sm text-h4-text-color">Handmade</h4>
+      </div>
+      <p class=" text-lg h-12">$40.00</p>
+    </div>
+  </div>
+
+  <div class="h-[480px] w-64 ">
+    <div class="w-full h-[70%]">
+      <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+    </div>
+    <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+      <div>
+        <h1>CHAIR</h1>
+      <h4 class="text-sm text-h4-text-color">Handmade</h4>
+      </div>
+      <p class=" text-lg h-12">$40.00</p>
+    </div>
+  </div>
+
+  <div class="h-[480px] w-64 ">
+    <div class="w-full h-[70%]">
+      <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+    </div>
+    <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+      <div>
+        <h1>CHAIR</h1>
+      <h4 class="text-sm text-h4-text-color">Handmade</h4>
+      </div>
+      <p class=" text-lg h-12">$40.00</p>
+    </div>
+  </div>
+
+  <div class="h-[480px] w-64 ">
+    <div class="w-full h-[70%]">
+      <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+    </div>
+    <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+      <div>
+        <h1>CHAIR</h1>
+      <h4 class="text-sm text-h4-text-color">Handmade</h4>
+      </div>
+      <p class=" text-lg h-12">$40.00</p>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+
+
+  <section class="pl-8 mt-4 md:my-8 py-20 flex flex-col md:flex-row md:justify-evenly lg:justify-center gap-6 lg:gap-14 bg-secondary-color">
+
+<div class="flex flex-col lg:flex-row gap-6 lg:gap-14 ">
+  <div class="flex gap-4">
+    <img class="h-12 w-12" src="../../../assets/images/HomePagePics/Hunt75.png" alt="">
+<div class="mt-3">
+  <h1 class="text-white font-semibold text-lg tracking-wider">FAST DELIVERY</h1>
+    <p class="underline text-white -mt-1">More Info</p>
+</div>
+  </div>
+  <div class="flex gap-4">
+    <img class="h-12 w-12" src="../../../assets/images/HomePagePics/Hunt76.png" alt="">
+    <div class="mt-3">
+      <h1 class="text-white font-semibold text-lg tracking-wider">24H SERVICE</h1>
+        <p class="underline text-white -mt-1">More Info</p>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-col lg:flex-row gap-6 lg:gap-14 ">
+  <div class="flex gap-4">
+    <img class="h-12 w-12" src="../../../assets/images/HomePagePics/Hunt77.png" alt="">
+    <div class="mt-3">
+      <h1 class="text-white font-semibold text-lg tracking-wider">FREE RETURNS</h1>
+        <p class="underline text-white -mt-1">More Info</p>
+    </div>
+  </div>
+  <div class="flex gap-4">
+    <img class="h-12 w-12" src="../../../assets/images/HomePagePics/Hunt78.png" alt="">
+    <div class="mt-3">
+      <h1 class="text-white font-semibold text-lg tracking-wider">ORDER TRACKING</h1>
+        <p class="underline text-white -mt-1">More Info</p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+
+  <!-- ---------------------------------------------------------------------Blog's------------------------------------------------- -->
+
+
+  <section class="flex flex-col items-center">
+<div class="w-full flex flex-col items-center pt-20 ">
+<p class="text-lg text-h1-text-color">Daily Dose of Tips</p>
+<h1 class="text-center text-2xl font-semibold tracking-widest mt-4 leading-9">READ OUR <br class="md:hidden"> BLOGS</h1>
+</div>
+
+<div class="flex flex-wrap justify-around px-12 lg:px-0 lg:gap-6 ">
+  <div class=" w-[85%] md:w-[45%] lg:w-72 mt-12">
+    <div class="h-[60%] w-full mt-6 mb-8">
+      <img class="w-full h-full object-cover" src="../../../assets/images/HomePagePics/Blog/Hunt51.jpg" alt="">
+    </div>
+    <p class="text-lg text-h1-text-color">Tables , Wall Plates - March 27 2023</p>
+    <h1 class="text-xl font-semibold tracking-widest mt-1">THINKING OF A PLACE</h1>
+    <H4 class="font-light text-h1-text-color mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt.</H4>
+    <button>
+      <p class="underline mt-3">Read More</p>
+    </button>
+  </div>
+
+  <div class=" w-[85%] md:w-[45%] lg:w-72 mt-12">
+    <div class="h-[60%] w-full mt-6 mb-8">
+      <img class="w-full h-full object-cover" src="../../../assets/images/HomePagePics/Blog/Hunt55.jpg" alt="">
+    </div>
+    <p class="text-lg text-h1-text-color">Wall Plates - April 08 2022</p>
+    <h1 class="text-xl font-semibold tracking-widest mt-1">PERFECT DECORATION</h1>
+    <H4 class="font-light text-h1-text-color mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt.</H4>
+    <button>
+      <p class="underline mt-3">Read More</p>
+    </button>
+  </div>
+
+  <div class=" w-[85%] md:w-[45%] lg:w-72 mt-12">
+    <div class="h-[60%] w-full mt-6 mb-8">
+      <img class="w-full h-full object-cover" src="../../../assets/images/HomePagePics/Blog/Hunt59.jpg" alt="">
+    </div>
+    <p class="text-lg text-h1-text-color">Plant Wase - May 17 2020</p>
+    <h1 class="text-xl font-semibold tracking-widest mt-1">INTERIOR DESIGN STYLE</h1>
+    <H4 class="font-light text-h1-text-color mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas incidunt.</H4>
+    <button>
+      <p class="underline mt-3">Read More</p>
+    </button>
+  </div>
+</div>
+
+  </section>
+
+
+  <!-- -----------------------------------------Online-Store------------------------------------------------------------ -->
+
+
+  <section class="relative my-24 bg-[rgb(236,233,233)]">
+      <img class="absolute inset-0 h-full w-full object-cover" src="../../../assets/images/HomePagePics/SVGIcons/svg-6.png" alt="">
+    <div class="relative w-full flex flex-col items-center md:items-start py-20 md:pl-20 overflow-hidden">
+<p class="text-lg text-h1-text-color w-[85%] md:w-full ">Premium Designs</p>
+<h1 class="text-3xl font-semibold tracking-widest mt-3 w-[85%] md:w-full ">ONLINE STORE</h1>
+<div class="w-full overflow-auto mt-6">
+  <div class=" w-max p-6 md:pl-0 overflow-x-scroll flex justify-start items-center gap-12 ">
+
+    <div class="h-96 w-80 md:w-[400px] md:h-[400px] bg-white px-8">
+      <div class="w-full h-[80%]">
+        <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-96 w-80 md:w-[400px] md:h-[400px] bg-white px-8">
+      <div class="w-full h-[80%]">
+        <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-96 w-80 md:w-[400px] md:h-[400px] bg-white px-8">
+      <div class="w-full h-[80%]">
+        <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-96 w-80 md:w-[400px] md:h-[400px] bg-white px-8">
+      <div class="w-full h-[80%]">
+        <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+    <div class="h-96 w-80 md:w-[400px] md:h-[400px] bg-white px-8">
+      <div class="w-full h-[80%]">
+        <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+      </div>
+      <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+        <div>
+          <h1>CHAIR</h1>
+        <h4 class="text-sm text-h4-text-color">Handmade</h4>
+        </div>
+        <p class=" text-lg h-12">$40.00</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="h-14 w-full md:h-16 md:w-96 mt-3 "></div>
+    </div>
+    <div class="w-full h-24 flex justify-center items-center bg-h1-text-color">
+<h2 class="text-4xl text-white">Free Shipping On $75+</h2>
+    </div>
+  </section>
+
+  <section class="w-full flex flex-col items-center md:flex-wrap md:justify-center md:flex-row">
+    <div class="h-36 w-52 ">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/SVGIcons/Hunt60.png" alt="">
+    </div>
+    <div class="h-36 w-52 ">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/SVGIcons/Hunt62.png" alt="">
+    </div>
+    <div class="h-36 w-52 ">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/SVGIcons/Hunt98.png" alt="">
+    </div>
+    <div class="h-36 w-52 ">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/SVGIcons/Hunt63.png" alt="">
+    </div>
+    <div class="h-36 w-52 ">
+      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/SVGIcons/Hunt61.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <div class="relative w-full flex flex-col items-center py-20">
+      <p class="text-lg text-h1-text-color text-center w-[85%]">Stay Up to Date</p>
+      <h1 class="text-3xl font-semibold tracking-widest text-center mt-3 w-[85%]">JOIN OUR <br class="md:hidden"> NEWSLETTER</h1>
+      <div class="w-full overflow-auto mt-3 md:mt-4">
+        <div class=" w-max p-3 overflow-x-scroll flex justify-start items-center gap-12 ">
+
+          <div class="h-[300px] w-[295.5px] bg-white ">
+              <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/Blog/Hunt51.jpg" alt="">
+          </div>
+
+          <div class="h-[300px] w-[295.5px] bg-white ">
+            <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/Blog/Hunt55.jpg" alt="">
+        </div>
+
+        <div class="h-[300px] w-[295.5px] bg-white ">
+          <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/Blog/Hunt59.jpg" alt="">
+      </div>
+
+        </div>
+       </div>
+          </div>
+  </section>
