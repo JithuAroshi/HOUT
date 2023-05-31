@@ -1,234 +1,18 @@
-
-<header class="h-14 lg:h-max flex flex-col justify-between items-center lg:py-2 lg:px-6 relative z-50">
-
-  <div [class.home]="homeshow" [class.homebk]="!homeshow" class=" w-full bg-white absolute left-0 top-20 px-5 duration-500 ease-linear overflow-hidden" >
-
-    <div class="flex flex-col ">
-
-      <div class="w-full flex justify-between items-center p-3 pb-0 ">
-        <h1 class="text-xs font-semibold tracking-widest">HOME</h1>
-      <button (click)="homefn()">
-          <span class="material-symbols-outlined text-sm font-extrabold">
-{{homearrow}}
-            </span>
-      </button>
-      </div>
-
-      <div [class.homemenu]="home" [class.homemenubk]="!home" class="overflow-hidden duration-500 ease-linear" >
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Main Page</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Store</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cart</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Out Team</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">About Us</p>
-      </div>
-
-    </div>
-
-    <div class="flex flex-col ">
-
-      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
-        <h1 class="text-xs font-semibold tracking-widest">PAGES</h1>
-      <button (click)="pagefn()">
-          <span class="material-symbols-outlined text-sm font-extrabold">
-{{pagesarrow}}
-            </span>
-      </button>
-      </div>
-
-      <div [class.homemenu]="pages" [class.homemenubk]="!pages" class="overflow-hidden duration-500 ease-linear" >
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Checkout</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Profile</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Order Tracking</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Wishlist</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">FAQs</p>
-      </div>
-
-    </div>
-
-    <div class="flex flex-col ">
-
-      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
-        <h1 class="text-xs font-semibold tracking-widest">SHOP</h1>
-      <button (click)="shopfn()">
-          <span class="material-symbols-outlined text-sm font-extrabold">
-{{shoparrow}}
-            </span>
-      </button>
-      </div>
-
-      <div [class.homemenu2]="shop" [class.homemenubk2]="!shop" class="overflow-hidden duration-500 ease-linear" >
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Chair</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Sofa</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Table</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Cabinet</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Tv Stand</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Bed</p>
-        <p class="p-2 pl-3 tracking-wide text-h1-text-color">Decorators</p>
-      </div>
-
-    </div>
-
-    <div class="flex flex-col ">
-
-      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
-        <h1 class="text-xs font-semibold tracking-widest">STORE</h1>
-      </div>
-
-    </div>
-
-    <div class="flex flex-col ">
-      <div class="w-full flex justify-between items-center p-3 pl-3 pb-0 ">
-        <h1 class="text-xs font-semibold tracking-widest">ABOUT US</h1>
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="h-5 w-[75%] flex justify-between border-b-[1px] mb-3">
-<h1 class="text-h1-text-color/70 font-thin text-xs">Free Shipping for order over$50!</h1>
-<span class="flex gap-3 text-h1-text-color/70 font-thin text-xs">
-  <h1>FAQ</h1>
-  <h1>Contact</h1>
-</span>
-  </div>
-
- <div class="flex justify-between items-center w-full lg:w-[75%] py-2 lg:py-0 ">
-  <span class="hidden lg:flex justify-center items-center w-52 ">
-    <span class="material-symbols-outlined text-lg text-black/80">
-      search
-      </span>
-    <input class="w-full h-10 px-1 outline-none bg-transparent text-xs text-black/80 placeholder-black/80" type="text" placeholder="SEARCH...">
-  </span>
-
-  <div class="h-14 w-36 lg:h-20 pb-1 lg:w-52 ">
-  <img class="h-full w-full object-contain" src="../../../assets/images/logo/Icon.png" alt="">
-  </div>
-
-  <div class="flex items-center justify-end gap-4 w-52 ">
-    <button class="hidden lg:block">
-      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
-person
-        </span>
-    </button>
-    <button class="hidden lg:flex items-center gap-1">
-      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
-        favorite
-        </span>
-        <h1 class="text-black/80">0</h1>
-    </button>
-    <button class="flex items-center gap-1">
-      <span (click)="cart()" class="material-symbols-outlined lg:text-xl text-black/80">
-        shopping_bag
-        </span>
-        <h1 class="text-black/80">0</h1>
-    </button>
-    <button class="lg:hidden flex justify-center items-center">
-      <span (click)="homeshowfn()" class="material-symbols-outlined text-black/80">
-        menu
-        </span>
-    </button>
-  </div>
- </div>
-
- <div class="lg:flex gap-12 mt-4 mb-3 hidden h-4">
-  <button class="">
-    <H1 class="tracking-widest text-xs font-semibold text-black/80 ">HOME</H1>
-  </button>
-  <button>
-    <H1 class="tracking-widest text-xs font-semibold text-black/80">PAGES</H1>
-  </button>
-  <button>
-    <H1 class="tracking-widest text-xs font-semibold text-black/80">SHOP</H1>
-  </button>
-  <button>
-    <H1 class="tracking-widest text-xs font-semibold text-black/80">STORE</H1>
-  </button>
-  <button>
-    <H1 class="tracking-widest text-xs font-semibold text-black/80">ABOUT US</H1>
-  </button>
- </div>
-
-<section [class.cart]="cartshow" [class.cartbk]="!cartshow" class="h-screen w-0 overflow-hidden flex justify-between absolute top-0 right-0 duration-500 bg-black/30 ">
-  <div (click)="cartbk()" class="h-full w-[10%] md:w-[40%] lg:w-full relative ">
-  </div>
-<div class="h-full w-[90%] md:w-[60%] lg:w-[440px] p-2 md:p-4 bg-white relative">
-<div class="h-[85%] w-full py-4 border-b-[1.5px] border-h1-text-color overflow-y-scroll ">
-<div class="flex flex-col gap-2">
-
-  <div class="h-32 w-full flex ">
-    <div class="h-full w-[35%] bg-pic-background-color">
-      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/Hunt143.jpg" alt="">
-    </div>
-    <div class="h-full w-[60%] px-3 flex flex-col gap-3 ">
-      <h1 class="font-semibold tracking-widest">WALL PLANT </h1>  <!-----Limit 21 Letters-->
-      <p class="text-lg text-h1-text-color">Quantity: 1</p>
-      <p class="text-lg ">$46.00</p>
-    </div>
-    <button class="flex items-start p-1">
-      <span class="material-symbols-outlined text-base">
-        close
-        </span>
-    </button>
-  </div>
-
-  <div class="h-32 w-full flex ">
-    <div class="h-full w-[35%] bg-pic-background-color">
-      <img class="h-full w-full object-contain" src="../../../assets/images/HomePagePics/Hunt162.jpg" alt="">
-    </div>
-    <div class="h-full w-[60%] px-3 flex flex-col gap-3 ">
-      <h1 class="font-semibold tracking-widest">WALL PLANT </h1>  <!-----Limit 21 Letters-->
-      <p class="text-lg text-h1-text-color">Quantity: 1</p>
-      <p class="text-lg ">$46.00</p>
-    </div>
-    <button class="flex items-start p-1">
-      <span class="material-symbols-outlined text-base">
-        close
-        </span>
-    </button>
-  </div>
-
-
-</div>
-
-</div>
-
-<div class="flex justify-between items-center w-full p-3 ">
-  <h1 class="text-xl font-semibold tracking-wider ">TOTAL:</h1>
-  <p class="text-lg text-h1-text-color -mt-1 ">$40.00</p>
-</div>
-
-<div class="flex justify-between items-center gap-3 md:gap-5  w-full p-1 px-3 md:px-4 ">
-  <button class="py-2 w-full bg-black">
-    <p class="text-white tracking-wider text-lg">View Cart</p>
-  </button>
-  <button class="py-2 w-full border-black/60 border-[0.1px]">
-    <p class=" text-lg tracking-wider">Checkout</p>
-  </button>
-</div>
-
-</div>
-</section>
-
-  </header>
-
-
 <!-- ------------------------------------------------------------Home-Page------------------------------------------------ -->
 
-
-  <section class="h-[80vh] w-full relative">
+  <section class="h-[80vh] lg:h-[83.6vh] w-full relative">
     <span class="flex justify-center items-center p-4 absolute top-0 left-0 lg:hidden">
       <span class="material-symbols-outlined text-white">
         search
         </span>
       <input class="w-full h-10 px-1 outline-none bg-transparent text-white placeholder-white" type="text" placeholder="Search...">
     </span>
-    <img class="h-full w-full object-cover object-left-bottom -z-50" src="../../../assets/images/HomePagePics/carosal.jpg" alt="">
+    <img class="h-full w-full object-cover -z-50" src="../../../assets/images/HomePagePics/Hunt79.jpg" alt="">
   </section>
 
-  <section class="w-full flex flex-col gap-10 md:gap-20 items-center pt-20 md:pt-28 ">
+  <section class="w-full flex flex-col gap-10 md:gap-20 items-center justify-around pt-20 md:pt-28 lg:flex-row lg:w-[60%] mx-auto lg:gap-0 ">
 
-    <div class="h-[510px] md:h-[790px] w-[85%] md:w-[75%] ">
+    <div class="h-[510px] md:h-[790px] w-[85%] md:w-[75%] lg:w-[340px] lg:h-[560px] ">
       <div class="w-full h-[70%]">
         <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/Hunt162.jpg" alt="">
       </div>
@@ -243,7 +27,7 @@ person
       </div>
     </div>
 
-    <div class="relative w-[85%] md:w-[75%] ">
+    <div class="relative w-[85%] md:w-[75%] lg:w-[430px] lg:h-[270px] mb-14">
       <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt87.jpg" alt="">
       <span class="absolute top-4 md:top-10 md:left-10 left-4">
         <h1 class="text-2xl">CERAMICS BLOGS</h1>
@@ -253,9 +37,9 @@ person
     </div>
   </section>
 
-  <section class="w-full flex flex-col gap-10 md:gap-20 items-center md:pt-6 pb-20 ">
+  <section class="w-full flex flex-col gap-10 md:gap-20 items-center md:pt-6 pb-20 lg:gap-0 lg:flex-row lg:justify-evenly lg:w-[60%] mx-auto lg:pt-0 lg:-mt-4">
 
-    <div class="relative w-[85%] md:w-[75%] mt-16">
+    <div class="relative w-[85%] md:w-[75%] mt-16 lg:w-[430px] lg:h-[270px] lg:mt-0 lg:mb-24">
       <img class="h-full w-full object-cover" src="../../../assets/images/HomePagePics/Hunt83.jpg" alt="">
       <span class="absolute top-4 md:top-10 md:left-10 left-4">
         <h1 class="text-2xl">CERAMICS BLOGS</h1>
@@ -264,7 +48,7 @@ person
       <h2 class="absolute bottom-2 left-2 md:bottom-8 md:left-10 text-4xl">-50% off</h2>
     </div>
 
-   <div class="h-[510px] md:h-[790px] w-[85%] md:w-[75%] ">
+   <div class="h-[510px] md:h-[790px] w-[85%] md:w-[75%] lg:w-[460px] lg:h-[740px] ">
       <div class="w-full h-[70%]">
         <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/Hunt143.jpg" alt="">
       </div>
@@ -281,35 +65,40 @@ person
 
   </section>
 
-  <section class="h-[690px] mt-12 w-full bg-secondary-color overflow-hidden flex justify-center items-center">
+  <section class="h-[690px] mt-12 w-full bg-secondary-color overflow-hidden flex justify-center items-center relative">
 
-<div class="relative h-[690px] md:w-[800px] lg:w-[1200px] flex flex-col justify-center items-center md:items-end gap-6 md:pr-10 ">
-  <div class="absolute top-16 -left-96">
+<div class="relative h-[690px] md:w-[800px] lg:w-[60%] flex flex-col justify-center items-center md:items-end gap-6 md:pr-10">
+  <div class="absolute top-16 lg:top-24 lg:left-6 -left-96 lg:h-96 lg:w-[490px]">
     <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-8.png" alt="">
   </div>
-  <div class="absolute top-6 -right-16">
+  <div class="absolute top-6 -right-16 lg:hidden">
     <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-4.png" alt="">
   </div>
-  <div class="absolute top-12 -left-20">
+  <div class="absolute top-12 lg:left-20 lg:top-32 -left-20">
     <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-2.png" alt="">
   </div>
-  <div class="absolute top-96 -right-36">
+  <div class="absolute top-96 -right-36 lg:top-[340px] -rotate-45 lg:left-60 lg:h-96 lg:w-[490px]">
     <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-6.png" alt="">
   </div>
-  <div class="hidden md:block absolute top-44 left-8 h-96 w-72">
-    <img class="h-full w-full" src="../../../assets/images/HomePagePics/Hunt42.jpg" alt="">
+  <div class="hidden md:block absolute top-44 left-8 lg:left-72 h-96 w-72 lg:h-[430px] lg:w-80">
+    <img class="h-full w-full " src="../../../assets/images/HomePagePics/Hunt120.jpg" alt="">
   </div>
-  <div class="hidden md:block absolute top-56 -left-4 h-56 w-52">
+  <div class="hidden md:block absolute top-56 -left-4 h-56 w-52 lg:left-36 lg:top-[340px]">
     <img class="h-full w-full" src="../../../assets/images/HomePagePics/Hunt40.jpg" alt="">
   </div>
 
-  <h1 class="relative text-center text-white text-5xl font-medium tracking-widest">THINK <br class="md:hidden"> DIFFERENT</h1>
-  <h4 class="relative text-center md:text-start md:w-1/2 text-white text-lg font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga cum quidem numquam ea facilis saepe quisquam alias doloribus officia dolore, assumenda ad. Unde quas sit, dolore tempora vitae error!</h4>
-<div class="w-1/2 flex justify-center md:justify-start">
-  <button class="relative h-14 w-52 mt-3 border-white border-[1px] bg-secondary-color">
+  <h2 class="hidden lg:block mr-[340px] -mb-5 relative text-5xl text-white tracking-widest ">Inspiration</h2>
+  <h1 class="relative text-center text-white text-5xl font-medium tracking-widest lg:text-4xl lg:mr-44 ">THINK <br class="md:hidden "> DIFFERENT</h1>
+  <h4 class="relative text-center md:text-start md:w-1/2 lg:w-[38%] text-white text-lg font-normal lg:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga cum quidem numquam ea facilis saepe quisquam alias doloribus officia dolore, assumenda ad. Unde quas sit, dolore tempora vitae error!</h4>
+<div class="w-1/2 flex justify-center md:justify-start lg:w-[38%]">
+  <button class="relative h-14 w-52 lg:h-12 lg:w-40 mt-3 border-white border-[1px] bg-secondary-color lg:bg-transparent">
     <p class="relative text-xl text-white">Read More</p>
   </button>
 </div>
+</div>
+
+<div class="absolute top-52 -right-16 ">
+  <img class="h-full w-full" src="../../../assets/images/HomePagePics/SVGIcons/svg-4.png" alt="">
 </div>
 
   </section>
@@ -323,7 +112,7 @@ person
    <div class="w-screen lg:w-full overflow-auto md:pl-14">
     <div class=" w-max p-8 overflow-x-scroll flex justify-start items-center gap-12 ">
 
-      <div class="h-[480px] w-64 ">
+      <div class="h-[480px] w-64  ">
         <div class="w-full h-[70%] ">
           <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
         </div>
@@ -390,6 +179,45 @@ person
 
       <div class="h-[480px] w-64 ">
         <div class="w-full h-[70%]">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64  ">
+        <div class="w-full h-[70%] ">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64  ">
+        <div class="w-full h-[70%] ">
+          <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
+        </div>
+        <div class="w-full h-[15%] p-1 flex justify-between items-end ">
+          <div>
+            <h1>CHAIR</h1>
+          <h4 class="text-sm text-h4-text-color">Handmade</h4>
+          </div>
+          <p class=" text-lg h-12">$40.00</p>
+        </div>
+      </div>
+
+      <div class="h-[480px] w-64  ">
+        <div class="w-full h-[70%] ">
           <img class="h-full w-full object-cover bg-pic-background-color" src="../../../assets/images/HomePagePics/shoplist4_home2-1.jpg.png" alt="">
         </div>
         <div class="w-full h-[15%] p-1 flex justify-between items-end ">
@@ -495,9 +323,21 @@ person
 </section>
 
 
-<section class="px-6 md:px-20 mb-16">
-  <div class="">
-    <img class="h-full w-full " src="../../../assets/images/HomePagePics/carosal.jpg" alt="">
+<section class="px-6 md:px-20 mb-16 w-full relative backdrop-blur-0 ">
+  <img class="h-[580px] w-full object-cover backdrop-blur-0" src="../../../assets/images/HomePagePics/Screenshot from 2023-05-31 13-04-28.png" alt="">
+  <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+    <button (click)="play()" class="h-44 w-44 rounded-full border-white border-[1.5px] ">
+  <p class="text-xl tracking-wide text-white">play</p>
+    </button>
+   </div>
+  <div (click)="play()" *ngIf="videoplay" class="w-[91.5%] lg:h-[580px] absolute top-0 left-20 backdrop-blur-lg justify-center items-center flex">
+    <video class="h-[80%] object-cover relative" autoplay="true" onplaying="true" (play)="true" loop="infinity" src="../../../assets/videos/pexels-taryn-elliott-7301089-3840x2160-25fps.mp4">
+    <button class="absolute right-3 top-3 bg-red-500 h-6 w-6 ">
+      <span class="material-symbols-rounded">
+        close
+        </span>
+    </button>
+    </video>
   </div>
 </section>
 
@@ -710,7 +550,7 @@ person
 
   <section class="pl-8 mt-4 md:my-8 py-20 flex flex-col md:flex-row md:justify-evenly lg:justify-center gap-6 lg:gap-14 bg-secondary-color">
 
-<div class="flex flex-col lg:flex-row gap-6 lg:gap-14 ">
+<div class="flex flex-col lg:flex-row gap-6 lg:gap-20 ">
   <div class="flex gap-4">
     <img class="h-12 w-12" src="../../../assets/images/HomePagePics/Hunt75.png" alt="">
 <div class="mt-3">
@@ -756,7 +596,7 @@ person
 <h1 class="text-center text-2xl font-semibold tracking-widest mt-4 leading-9">READ OUR <br class="md:hidden"> BLOGS</h1>
 </div>
 
-<div class="flex flex-wrap justify-around px-12 lg:px-0 lg:gap-6 ">
+<div class="flex flex-wrap justify-around px-12 lg:px-0 lg:gap-20">
   <div class=" w-[85%] md:w-[45%] lg:w-72 mt-12">
     <div class="h-[60%] w-full mt-6 mb-8">
       <img class="w-full h-full object-cover" src="../../../assets/images/HomePagePics/Blog/Hunt51.jpg" alt="">
@@ -802,7 +642,7 @@ person
 
   <section class="relative my-24 bg-[rgb(236,233,233)]">
       <img class="absolute inset-0 h-full w-full object-cover" src="../../../assets/images/HomePagePics/SVGIcons/svg-6.png" alt="">
-    <div class="relative w-full flex flex-col items-center md:items-start py-20 md:pl-20 overflow-hidden">
+    <div class="relative w-full flex flex-col items-center md:items-start py-20 md:pl-20 lg:pl-[450px] overflow-hidden">
 <p class="text-lg text-h1-text-color w-[85%] md:w-full ">Premium Designs</p>
 <h1 class="text-3xl font-semibold tracking-widest mt-3 w-[85%] md:w-full ">ONLINE STORE</h1>
 <div class="w-full overflow-auto mt-6">
@@ -901,11 +741,11 @@ person
   </section>
 
   <section>
-    <div class="relative w-full flex flex-col items-center py-20">
+    <div class="relative w-full flex flex-col items-center py-20 ">
       <p class="text-lg text-h1-text-color text-center w-[85%]">Stay Up to Date</p>
       <h1 class="text-3xl font-semibold tracking-widest text-center mt-3 w-[85%]">JOIN OUR <br class="md:hidden"> NEWSLETTER</h1>
-      <div class="w-full overflow-auto mt-3 md:mt-4">
-        <div class=" w-max p-3 overflow-x-scroll flex justify-start items-center gap-12 ">
+      <div class="w-full overflow-auto mt-3 md:mt-4 ">
+        <div class=" w-max p-3 overflow-x-scroll flex justify-start items-center gap-12 mx-auto">
 
           <div class="h-[300px] w-[295.5px] bg-white ">
               <img class="h-full w-full object-cover " src="../../../assets/images/HomePagePics/Blog/Hunt51.jpg" alt="">

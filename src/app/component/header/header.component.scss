@@ -1,0 +1,116 @@
+h1{
+  font-family: 'Figtree', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+  font-family: 'EB Garamond', serif;
+}
+
+h2{
+  font-family: 'Licorice', cursive;
+}
+
+span{
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
+
+input{
+  font-family: 'Figtree', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.home{
+  padding-top: 36px;
+  padding-bottom: 50px;
+  animation: home 0.5s linear ;
+}
+.homebk{
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  animation: homebk 0.5s linear ;
+}
+
+.homemenu{
+  height: 190px;
+}
+.homemenubk{
+  height: 0px;
+}
+
+.homemenu2{
+  height: 280px;
+  }
+  .homemenubk2{
+    height: 0px;
+  }
+
+.cart{
+  width: 100%;
+}
+.cartbk{
+  width: 0px;
+}
+
+
+// @keyframes homemenu2 {
+//   0%    { height: 0px; }
+//   10%   { height: 28px; }
+//   20%   { height: 56px; }
+//   30%  { height:84px ; }
+//   40%   { height: 112px; }
+//   50%   { height: 140px; }
+//   60%  { height:168px; }
+//   70%  { height:196px ; }
+//   80%   { height: 224px; }
+//   90%   { height: 252px; }
+//   100%  { height:280px; }
+// }
+
+// @keyframes homemenubk2 {
+//   0%    { height: 280px; }
+//   10%   { height: 252px; }
+//   20%   { height: 224px; }
+//   30%  { height:196px ; }
+//   40%   { height: 168px; }
+//   50%   { height: 140px; }
+//   60%  { height:112px; }
+//   70%  { height:84px ; }
+//   80%   { height: 56px; }
+//   90%   { height: 28px; }
+//   100%  { height:0px; }
+// }
+
+@keyframes home {
+  0%    { height: 0px; }
+  10%   { height: 25px; }
+  20%   { height: 50px; }
+  30%  { height:75px ; }
+  40%   { height: 100px; }
+  50%   { height: 125px; }
+  60%  { height:150px; }
+  70%  { height:175px ; }
+  80%   { height: 200px; }
+  90%   { height: 225px; }
+  95%   { height: 250px; }
+  100%  { height:max-content; }
+}
+@keyframes homebk {
+  0%    { height: max-content; }
+  5%   { height: 250px; }
+  10%   { height: 225px; }
+  20%   { height: 200px; }
+  30%  { height:175px ; }
+  40%   { height: 150px; }
+  50%   { height: 125px; }
+  60%  { height:100px; }
+  70%  { height:75px ; }
+  80%   { height: 50px; }
+  90%   { height: 25px; }
+  100%  { height:0px; }
+}
+
